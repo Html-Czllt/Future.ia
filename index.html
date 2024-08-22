@@ -1,0 +1,41 @@
+
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Interativo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="home">
+        <div class="content">
+            <div class="message">O futuro da IA em suas mãos</div>
+            <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjdja2RyaG96NHkwZGhjeDF2NGNzaGUxbG9qOTduaWhtbzgwZ2J2aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jPcVwQH98cgSaOXMNb/giphy.webp" class="central-image" alt="Descrição da imagem">
+            <button id="start-btn">Iniciar Jogo</button> <!-- Botão com ID start-btn -->
+        </div>
+    </div>
+    
+    <div id="narrative" style="display: none;">
+        <div class="content">
+            <div id="narrative-card">
+                <p id="narrative-text">João, proprietário da Academia FitPro, está considerando uma grande mudança. Recentemente, ele descobriu as últimas inovações tecnológicas no setor de fitness e está pensando em modernizar sua academia com equipamentos inteligentes, aplicativos de treinamento e realidade aumentada. Ele sabe que essa transformação pode colocar a FitPro na vanguarda do mercado, mas também envolve um investimento significativo e possíveis riscos.</p>
+                <div id="choices-container">
+                    <!-- Opções serão inseridas aqui via JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="end-screen" style="display: none;">
+        <div class="content">
+            <p id="end-text">Obrigado por jogar!</p>
+            <button id="restart-btn">Jogar Novamente</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

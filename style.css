@@ -1,0 +1,165 @@
+/* Estilos da página inicial */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #FFB6C1; /* Rosa bebê claro */
+    color: #000000; /* Preto para o texto */
+}
+
+.content {
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 0 10px; /* Adiciona um pouco de espaçamento nas laterais */
+    box-sizing: border-box; /* Inclui o padding na largura total */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza itens horizontalmente */
+}
+
+.message, .central-image, #narrative-card, #choices-container button, #end-text {
+    background-color: #000000; /* Fundo preto para melhorar legibilidade */
+    color: #FFFFFF; /* Texto branco para contraste com fundo preto */
+    padding: 12px;
+    border: #00FFFF 2px solid; /* Borda ciano choque */
+    border-radius: 9px;
+    font-size: 20px; /* Aumenta o tamanho da fonte */
+    font-weight: bold; /* Torna o texto mais grosso */
+    position: relative; /* Necessário para o fundo preto atrás do texto */
+}
+
+.central-image {
+    width: 100%;
+    max-width: 300px;
+    margin: 20px 0;
+    border-radius: 8%;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s ease, filter 0.5s ease, box-shadow 0.5s ease, border 0.5s ease; /* Tempo de transição para todos os efeitos */
+}
+
+.central-image:hover {
+    transform: scale(1.1) rotate(5deg); /* Aumenta a imagem e rotaciona */
+    filter: brightness(1.2); /* Aumenta o brilho */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Adiciona uma sombra */
+}
+
+.central-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Sobreposição escura */
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Tempo de transição para a sobreposição */
+}
+
+.central-image:hover::before {
+    opacity: 1; /* Mostra a sobreposição ao passar o mouse */
+}
+
+
+
+button {
+    background-color: #000000; /* Preto puro */
+    border: 2px solid #00FFFF; /* Ciano choque para a borda */
+    color: #00FFFF; /* Ciano choque para o texto */
+    padding: 12px 24px;
+    font-size: 20px; /* Aumenta o tamanho da fonte */
+    font-weight: bold; /* Torna o texto mais grosso */
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
+    margin-top: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra de texto para legibilidade */
+}
+
+button:hover {
+    background-color: #00FFFF; /* Ciano choque para o fundo ao passar o mouse */
+    color: #000000; /* Preto para o texto ao passar o mouse */
+    border-color: #00FFFF; /* Ciano choque para a borda ao passar o mouse */
+    box-shadow: 0px 8px 15px rgba(0, 255, 255, 0.2); /* Sombra ciano choque ao passar o mouse */
+}
+
+/* Estilos do conteúdo da narrativa */
+#narrative-card {
+    padding: 20px;
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0px 4px 22px rgba(0, 255, 255, 0.692); /* Sombra ciano choque para destacar */
+    color: #ffffff; /* Texto branco */
+    max-width: 100%; /* Garante que o cartão não ultrapasse a tela */
+    margin: auto; /* Centralizar o cartão */
+    background-color: #f1b1b9;
+    font-size: 20px; /* Aumenta o tamanho da fonte */
+    font-weight: bold; /* Torna o texto mais grosso */
+}
+
+/* Estilos das opções de resposta */
+#choices-container button {
+    background-color: #000000; /* Preto puro */
+    border: 2px solid #00FFFF; /* Ciano choque para a borda */
+    color: #00FFFF; /* Ciano choque para o texto */
+    padding: 12px 24px;
+    font-size: 20px; /* Aumenta o tamanho da fonte */
+    font-weight: bold; /* Torna o texto mais grosso */
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra de texto para legibilidade */
+}
+
+#choices-container button:hover {
+    background-color: #00FFFF; /* Ciano choque para o fundo ao passar o mouse */
+    color: #000000; /* Preto para o texto ao passar o mouse */
+    border-color: #00FFFF; /* Ciano choque para a borda ao passar o mouse */
+    box-shadow: 0px 8px 15px rgba(0, 255, 255, 0.2); /* Sombra ciano choque ao passar o mouse */
+}
+
+#end-text {
+    box-shadow: 0px 4px 22px rgba(0, 255, 255, 0.692); /* Sombra ciano choque para destacar */
+
+    font-size: 24px; /* Aumenta o tamanho da fonte */
+    color: #FFFFFF; /* Texto branco */
+    background-color: #f1b1b9;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold; /* Torna o texto mais grosso */
+}
+
+/* Media queries */
+@media (max-width: 600px) {
+    body {
+        display: flex;
+        flex-direction: column; /* Alinha itens verticalmente */
+        justify-content: center;
+        align-items: center;
+        padding: 0; /* Remove o padding */
+    }
+
+    .content {
+        width: 100%;
+        padding: 0; /* Remove o padding para evitar deslocamento */
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 18px; /* Ajusta o tamanho da fonte */
+    }
+
+    #narrative-card {
+        padding: 15px;
+        max-width: 100%; /* Garante que o cartão não ultrapasse a tela */
+        box-sizing: border-box; /* Inclui padding na largura total */
+    }
+
+    #narrative-text {
+        font-size: 18px; /* Ajusta o tamanho da fonte */
+    }
+}
